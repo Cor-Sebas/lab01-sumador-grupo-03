@@ -2,14 +2,18 @@
 
 module sum4b_TB;
 
+  // Se crea un registro de 4 bits
   // Inputs
   reg [3:0] xi;
   reg [3:0] yi;
 
+	
   // Outputs
+  // Los wires sirven declarar variables internas.
   wire co;
   wire [3:0] zi;
 
+	
   // Instantiate the Unit Under Test (UUT)
   sum4b uut (
     .xi(xi), 
