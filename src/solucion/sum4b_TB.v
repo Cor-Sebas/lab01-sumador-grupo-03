@@ -40,8 +40,8 @@ module sum4b_TB;
       #5 $display("el valor de %d + %d = %d", xi,yi,zi) ;
     end
   end      
-/* Al analizar el for la estructura del for, se puede observar que xi y yi estàn en hexadecimal. Cada vez que yi se desborda
-ya que està definida como un registro de cuatro bits que almacena en decimal del o al 15, xi aumenta su valor desde 0 en decimal
+/* Al analizar la estructura del for, se puede observar que xi y yi estàn en hexadecimal. Cada vez que yi se desborda
+ya que està definida como un registro de cuatro bits que almacena en decimal del 0 al 15, xi aumenta su valor desde 0 en decimal
 hasta el numero menor a 16 que el tiempo de simulación se lo permita. A simple vista engaña, ya que pareciera que fuera un ciclo sin fin.
 */
 
