@@ -9,12 +9,17 @@ module sum4b_TB;
 
 	
   // Outputs
-  // Los wires sirven declarar variables internas.
+	
+  //Solo se debe hacer para declarar multibit busses, pero es recomendable colarlo
+  //a todas las variable internas [1]
+ 
   wire co;
   wire [3:0] zi;
 
 	
+	
   // Instantiate the Unit Under Test (UUT)
+  // Se asigna a la función sum4b los valores de los registros y los wires declarados previamente. 
   sum4b uut (
     .xi(xi), 
     .yi(yi), 
@@ -22,12 +27,16 @@ module sum4b_TB;
     .zi(zi)
   );
 
+	
   initial begin
   // Initialize Inputs
     xi=0;
 	 for (yi = 0; yi < 16; yi = yi + 1) begin
       if (yi==0)
         xi=xi+1;
+		 // Muestra en la consola del simulador un mensaje, durante la síntesis no tiene importancia[1].
+		 // Según fuentes de internet, la %d significa que el formato en el que se van a imprimir los valores de 
+		 // xi y yi es el de decimales.
       #5 $display("el valor de %d + %d = %d", xi,yi,zi) ;
     end
   end      
@@ -45,3 +54,5 @@ manera.
 */
 endmodule
 
+//Referencias
+// [1] D.M. Harris & S.L. Harris, Digital Design and computer Architecture.
