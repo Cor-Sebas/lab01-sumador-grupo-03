@@ -32,12 +32,16 @@ module sum4b_TB;
     end
   end      
 
+/* Esta parte del archivo fue eliminada a la hora de realizar la simulación en vivado pues de no ser así
+se mostraba un mensaje de error y no se podia obtener simulacion. No entendemos el objetivo de estas lineas
+pero creemos que el problema se encuentra en "sum4b_TB.vcd", quizas no tenemos guardada la funcion de la misma
+manera.
 
-initial begin: TEST_CASE
+   initial begin: TEST_CASE
      $dumpfile("sum4b_TB.vcd");
      $dumpvars(-1, uut);
      #(1280) $finish;
    end
-
+*/
 endmodule
 
