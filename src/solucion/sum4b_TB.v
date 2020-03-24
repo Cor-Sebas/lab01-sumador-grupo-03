@@ -40,7 +40,13 @@ module sum4b_TB;
       #5 $display("el valor de %d + %d = %d", xi,yi,zi) ;
     end
   end      
+/* Al analizar el for la estructura del for, se puede observar que xi y yi estàn en hexadecimal. Cada vez que yi se desborda
+ya que està definida como un registro de cuatro bits que almacena en decimal del o al 15, xi aumenta su valor desde 0 en decimal
+hasta el numero menor a 16 que el tiempo de simulación se lo permita. A simple vista engaña, ya que pareciera que fuera un ciclo sin fin.
+*/
 
+	
+	
 /* Esta parte del archivo fue eliminada a la hora de realizar la simulación en vivado pues de no ser así
 se mostraba un mensaje de error y no se podia obtener simulacion. No entendemos el objetivo de estas lineas
 pero creemos que el problema se encuentra en "sum4b_TB.vcd", quizas no tenemos guardada la funcion de la misma
